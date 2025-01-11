@@ -1,0 +1,97 @@
+  body{
+    background-image: url(asset/Orange\ Flex.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(10px);
+}
+.sign{
+    width: 70%;
+    height: 500px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    justify-content: space-between;
+    transition: 2s;
+}
+.form{
+    width: 60%;
+    transition: 2s;
+    padding: 5%;
+}
+.submit{
+    opacity: 50px;
+    padding: 5%;
+    width: 20%;
+    line-height: 50px;
+    transition: 2s;
+}
+.submit p{
+    line-height: 18px;
+}
+
+.sign h1{
+    font-family: 'Tangerine', serif;
+    font-weight: 700;
+    font-size: 50px;
+
+}
+input{
+    width: 30%;
+    height: auto;
+    outline: none;
+    border: none;
+    padding: 10px;
+    margin: 0px 20px 20px 20px;
+    background-color: rgb(247, 158, 117);
+}
+input:invalid{
+    background-color: rgb(226, 191, 175);
+}
+button{
+    background-color: rgb(255, 115, 0);
+    padding: 8px 30px 8px 30px;
+    border-radius: 20px;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    margin: 30px;
+    border: 2px solid rgb(247, 240, 240) ;
+}
+a{
+    color: black;
+}
+#email {
+    background-image: url(asset/MAIL.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-left: 30px;
+}
+#password {
+    background-image: url(asset/KEY.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-left: 30px;
+}
+#name{
+    background-image: url(asset/BADGE.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-left: 30px;
+}
+@media  (max-width:800px) {
+    .sign{
+        width: 100%;
+    }
+    .sign h1{
+        font-size: 20px;
+        line-height: 20px;
+    }
+    button{
+        background-color: rgb(255, 115, 0);
+        padding: 0px 5px 0px 5px;
+        border-width: 1px;
+        font-size: 8px;
+    }
+}
