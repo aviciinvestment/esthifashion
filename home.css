@@ -1,6 +1,8 @@
 #body{
     cursor:context-menu;
     filter: brightness(50px);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 10px;
 }
 .smalldivmarkup{
     background-color: #f8b44d;
@@ -209,10 +211,6 @@ footer div{
     margin: auto;
 }
 @media (max-width:500px) {
-    header{
-        width: 85%;
-        margin: auto;
-    }
     .smalldivmarkup{
         left:5%;
     }

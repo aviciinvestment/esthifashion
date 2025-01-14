@@ -175,6 +175,12 @@ nav div :nth-child(odd){
 }
 .head2{
     background-image: url(asset/changer.jpeg);
+    width: 500px;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    transition: 1s;
 }
 .smalldivelement{
     background-image: url(asset/modest.jpg);
