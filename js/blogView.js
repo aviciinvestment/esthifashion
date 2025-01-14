@@ -36,9 +36,12 @@ const header = document.querySelector('header')
     }
 
     _slider(){
+        const add = (element) =>{
+            element.classList.toggle('head2')
+        }
         this.setChange = !this.setChange;
-        this.setChange ? largedivelement.style.backgroundImage = 'url(asset/changer.jpeg)':largedivelement.style.backgroundImage = 'url(asset/modest.jpg)';
-        this.setChange ? largedivelement2.style.backgroundImage = 'url(asset/change.png)':largedivelement2.style.backgroundImage = 'url(asset/wash.jpeg)'
+        this.setChange ? add(largedivelement): add(largedivelement)
+        this.setChange ? add(largedivelement2): add(largedivelement2)
     }
 
 

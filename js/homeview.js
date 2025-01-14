@@ -7,6 +7,9 @@ const tabopener = document.querySelectorAll('.tabopener');
 const markup = document.getElementById('markup');
 const body = document.querySelector('#body')
 const bodyAll = document.querySelector('body')
+const largedivelement2 = document.querySelector('.largedivelement2')
+const largedivelement3 = document.querySelector('.largedivelement3')
+const largediv3 = document.querySelector('.largediv3')
 const rect =secondsection.getBoundingClientRect()
 const top = rect.top + window.pageYOffset;
 
@@ -24,9 +27,14 @@ class homeview {
     /////////////////////////////
     //header image change
     _headerBackgrounChange(){
+        const add = () =>{
+            header.classList.toggle('head2')
+        }
         this.setChange = !this.setChange;
-        this.setChange ? header.style.backgroundImage = 'url(asset/wash.jpeg)': header.style.backgroundImage = 'url("asset/Orange\ Flex.jpg")';
+        this.setChange ? add(): add();
     }
+
+
     ///////////////////////
     //welcoming a user through name display
     _Welcome(){
@@ -46,9 +54,9 @@ class homeview {
         const obscallback = function(entries) {
             entries.forEach(entry => {
                 if (entry.isIntersecting === true) {
-                    secondsection.style.transform = 'rotateX(0deg)'
+                    largedivelement2.style.transform = 'rotateX(0deg)'
                 }else{
-                    secondsection.style.transform = 'rotateX(180deg)'
+                    largedivelement2.style.transform = 'rotateX(180deg)'
                 }
             });
         }
@@ -59,7 +67,46 @@ class homeview {
         }
 
         const observer = new IntersectionObserver(obscallback,obsoption);
-        observer.observe(secondsection);
+        observer.observe(largedivelement2);
+        ////////////////////////////////////////////
+        const obscallback2 = function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting === true) {
+                    largediv3.style.marginTop = '50px'
+                }else{
+                    largediv3.style.marginTop = '300px'
+                }
+            });
+        }
+
+        const obsoption2 = {
+            root: null,
+            treshold: 0.1
+        }
+
+        const observer2 = new IntersectionObserver(obscallback2,obsoption2);
+        observer2.observe(largediv3);
+
+
+        /////////////////////////////////////////
+        const obscallback1 = function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting === true) {
+                    secondsection.style.transform = 'scale(1)'
+                }else{
+                    secondsection.style.transform = 'scale(0.5)'
+                }
+            });
+        }
+
+        const obsoption1 = {
+            root: null,
+            treshold: 0.1
+        }
+
+        const observer1 = new IntersectionObserver(obscallback1,obsoption1);
+        observer1.observe(secondsection);
+
     }
 ///////////////////////////////////////////////////////////////
 //changing tab content

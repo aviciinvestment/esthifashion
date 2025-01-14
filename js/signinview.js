@@ -97,7 +97,7 @@ class View {
                 this.userdata = JSON.parse(localStorage.getItem('userData'));
                 ((this.formemail.value === this.userdata.email) && (this.formpassword.value === this.userdata.Password)) ?
                 window.location.assign('./home.html') :
-                        alert('incorrect password or email⚠️⚠️⚠️')
+                        prompt('incorrect password or email⚠️⚠️⚠️')
             }
             change ? this.formemail.value = this.formpassword.value = '':this.submitemail.value = this.submitname.value = this.submitpassword.value=''
 
