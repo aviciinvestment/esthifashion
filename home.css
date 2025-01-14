@@ -6,12 +6,12 @@
 }
 .smalldivmarkup{
     background-color: #f8b44d;
-    width: 60%;
+    width: 100%;
     margin: auto;
     padding: 50px;
     position: absolute;
-    top: 100px;
-    left:10%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 10px;
     
 }
 #markup{
@@ -211,7 +211,5 @@ footer div{
     margin: auto;
 }
 @media (max-width:500px) {
-    .smalldivmarkup{
-        left:5%;
-    }
+
 }
